@@ -1,0 +1,44 @@
+{
+  "doctorList": [
+    {
+      "name": "jeevan",
+      "email": "jeevan@gmail.com",
+      "mobile": 7517490707,
+      "password": "abc#",
+      "date": "2023-03-22T18:30:00.000Z",
+      "degree": "BDS",
+      "fee": 2000,
+      "id": 1
+    },
+    {
+      "name": "Elon Musk",
+      "email": "elon@gmail.com",
+      "mobile": 123123123,
+      "password": "elon",
+      "date": "2023-03-13T18:30:00.000Z",
+      "degree": "abc",
+      "fee": 321,
+      "id": 2
+    },
+    {
+      "name": "sad",
+      "email": "asdas",
+      "mobile": 213213,
+      "password": "sdadsa",
+      "date": "2023-03-23T18:30:00.000Z",
+      "degree": "sadas",
+      "fee": 12321,
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <div class="logo text-center">
+            <img class="logo" src="assets\femaleDoctor.png" alt="">
+        </div>
+    </button>
+    <span>Doctors +</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button (click)="openDialog()">Register</button>
+    &nbsp; &nbsp;
+    <button mat-raised-button color="warn" routerLink="/login">Logout</button>
+
+</mat-toolbar>
+
+<div class="row">
+    <div class="column" *ngFor="let data of list">
+        <div class="card">
+            <img class="person" src="assets\person.png" alt="Jane">
+            <div class="container">
+                <h2>Dr.{{data.name}}</h2>
+                <p class="title">{{data.degree}}</p>
+                <p>Email: {{data.email}} </p>
+                <p>Contact No. {{data.mobile}}</p>
+                <p>₹{{data.fee}}</p>
+                <button mat-raised-button color="primary" (click)="openSnackBar('Appointment Booked','Close')">Book
+                    Appointment</button>
+                <div mat-dialog-actions [align]="'end'">
+                    <button mat-icon-button color="warn" (click)="deleteDoctor(data)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>

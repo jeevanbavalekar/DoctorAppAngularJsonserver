@@ -1,0 +1,56 @@
+<h1 mat-dialog-title>Registration</h1>
+<div mat-dialog-content>
+    <form [formGroup]="doctorForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Full Name</mat-label>
+            <input formControlName="name" matInput placeholder="Dr.Elon Musk">
+            <mat-icon matSuffix>account_circle</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput placeholder="helloworld@gmail.com">
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Mobile Number</mat-label>
+            <input formControlName="mobile" matInput placeholder="7517490707" type="number">
+            <mat-icon matSuffix>call</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Set Password</mat-label>
+            <input formControlName="password" matInput placeholder="hello@world" [type]="hide ? 'password' :'text'"
+                required>
+            <button mat-icon-button matSuffix (click)="hide =!hide" [attr.aria-label]="'Hide Password'"
+                [attr.aira-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off': 'visibility'}}</mat-icon>
+            </button> </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Date of Graduation</mat-label>
+            <input formControlName="date" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Degree </mat-label>
+            <input formControlName="degree" matInput placeholder="MMBS">
+            <mat-icon matSuffix>receipt</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Consult fee</mat-label>
+            <input formControlName="fee" matInput placeholder="2000/-" type="number">
+            <mat-icon matSuffix>attach_money</mat-icon>
+        </mat-form-field>
+
+    </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button mat-raised-button color="primary" (click)="addDoctor()">Save</button>
+
+</div>

@@ -1,0 +1,36 @@
+<div class="logo text-center">
+    <img class="logo" src="assets\femaleDoctor.png" alt="">
+</div>
+
+<mat-card>
+    <mat-card-content>
+        <div class="header">
+            <h2>LOGIN</h2>
+        </div>
+        <form (ngSubmit)="login()" name="loginForm" [formGroup]="loginForm">
+            <div class="email-input">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input type="text" formControlName="email" matInput required />
+                    <mat-icon matSuffix style="padding-right: 12px;">email</mat-icon>
+                    <mat-error *ngIf="loginForm.get('email')?.errors">
+                        Required email address
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div><span class="aLink">Forget Password</span>
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" matInput [type]="hide ? 'password' :'text'" required />
+                    <button mat-icon-button matSuffix (click)="hide =!hide" [attr.aria-label]="'Hide Password'"
+                        [attr.aira-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off': 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error *ngIf="loginForm.get('password')?.errors">Required Password</mat-error>
+                </mat-form-field>
+            </div>
+            <button mat-flat-button color="primary">Login</button>
+        </form>
+        <button mat-stroked-button color="primary" (click)="openDialog()">Register</button>
+    </mat-card-content>
+</mat-card>

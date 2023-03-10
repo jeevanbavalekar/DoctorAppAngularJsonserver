@@ -1,0 +1,53 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.logo {
+    width: auto;
+    height: 40px;
+}
+
+.person {
+    height: 90px;
+    width: 90px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column {
+    margin-left: 40px;
+    margin-top: 30px;
+    float: left;
+    width: 28%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #bdc3c7;
+    padding: 10px;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+mat-form-field {
+    margin-right: 12px;
+}
